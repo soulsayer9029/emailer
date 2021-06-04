@@ -34,7 +34,7 @@ app.post('/sendmail',async(req,res)=>{
         from:'nodeforme@gmail.com',
         to:req.body.recieverEmail,
         subject:'Query',
-        text:`${req.body.senderEmail} has asked a question regarding \n ${req.body.message} \n whose mobile number is ${req.body.mobile}`
+        text:`  Sender E-mail:${req.body.senderEmail} \n Message: ${req.body.message} \n mobile number  ${req.body.mobile} \n scope:${req.body.scope} \n client:${req.body.client}`
     },(error,info)=>{
         if(error){
             console.log("hii")
